@@ -1,0 +1,12 @@
+# 核心依赖
+markitdown>=0.0.1
+rich>=13.0
+
+# 可选：增强模式（Agent 精炼 + 网络搜索）
+# anthropic>=0.39.0
+# openai>=1.0.0
+# httpx>=0.27.0
+
+# 可选：向量检索
+# sentence-transformers>=3.0.0
+# numpy>=1.26.0

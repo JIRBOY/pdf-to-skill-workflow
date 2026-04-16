@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-to-skill"
+version = "0.1.0"
+description = "Convert technical documentation (PDF/manuals/API docs) into Claude Code skills with searchable knowledge base"
+requires-python = ">=3.10"
+dependencies = [
+    "markitdown>=0.0.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+enhanced = [
+    "anthropic>=0.39.0",
+    "openai>=1.0.0",
+    "httpx>=0.27.0",
+]
+vector = [
+    "sentence-transformers>=3.0.0",
+    "numpy>=1.26.0",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4.0",
+]
+
+[project.scripts]
+pdf-to-skill = "pdf_to_skill.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pdf_to_skill*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
